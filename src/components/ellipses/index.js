@@ -30,12 +30,12 @@ const ellipses = [
 
 export default function Ellipses(props) {
   return (
-    <div className='ellipses'>
+    <>
       {ellipses.map(({image, rotate, id}) => {
         return (
             <img key={id} src={image} alt="" className={`ellipse ellipse_${rotate} ellipse_${id}`}/>
         )
       })}
-    </div>
+    </>
   );
 }

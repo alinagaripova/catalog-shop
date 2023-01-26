@@ -24,6 +24,7 @@
   
   &__logo {
     max-width: 100px;
+    width: 100px;
 
     img {
       width: 100%;
@@ -36,5 +37,11 @@
 
   &__right-block {
     width: 177px;
+    font-weight: 700;
+    font-size: 12px;
+
+    @media (min-width: 577px)  {
+      width: 200px;
+    }
   }
 }

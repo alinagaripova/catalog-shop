@@ -6,8 +6,8 @@ import Ellipses from '../components/ellipses'
 export default function MainLayout(props) {
   return (
     <div className='main-layout'>
-      <Ellipses/>
       <Header />
+      <Ellipses/>
       {props.children}
       <Footer/>
     </div>
