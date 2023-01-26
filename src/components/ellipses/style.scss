@@ -1,0 +1,35 @@
+@import '../../styles/mixins.scss';
+
+@include random-move(ellipse-moving1);
+@include random-move(ellipse-moving2);
+@include random-move(ellipse-moving3);
+@include random-move(ellipse-moving4);
+
+.ellipses {
+  display: flex;
+  flex-wrap: wrap;
+    .ellipse {
+      filter: blur(30px);
+      width: 559px;
+      position: absolute;
+      animation-duration: 8s;
+      
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      &_right {
+        transform: rotate(-65.41deg);
+      }
+      &_1 {
+        animation-name: ellipse-moving1;
+      }
+      &_2 {
+        animation-name: ellipse-moving2;
+      }
+      &_3 {
+        animation-name: ellipse-moving3;
+      }
+      &_4 {
+        animation-name: ellipse-moving4;
+      }
+    }
+}

@@ -1,0 +1,25 @@
+/** mixin random moving absolute position element **/
+@mixin random-move($name) {
+  @keyframes #{$name} {
+    0% {
+      top: percentage(random(70) / 100);
+      left: percentage(random(90) / 100);
+    }
+    25% {
+      top: percentage(random(70) / 100);
+      left: percentage(random(90) / 100);
+    }
+    55% {
+      top: percentage(random(70) / 100);
+      left: percentage(random(90) / 100);
+    }
+    75% {
+      top: percentage(random(70) / 100);
+      left: percentage(random(90) / 100);
+    }
+    100% {
+      top: percentage(random(70) / 100);
+      left: percentage(random(90) / 100);
+    }
+  }
+}

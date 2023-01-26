@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  color: #FFFFFF;
+  padding: 15px 20px;
+
+  &__el {
+    display: none;   
+  }
+
+  @media (min-width: 577px)  {
+    justify-content: space-around;
+    padding: 48px 0;
+    border-bottom: 1px solid #CDD2DD;
+
+    &__el {
+      display: block;
+      width: 130px;
+    }
+  }
+  
+  &__logo {
+    max-width: 100px;
+
+    img {
+      width: 100%;
+    }
+
+    @media (min-width: 577px)  {
+      max-width: 150px;
+    }
+  }
+
+  &__right-block {
+    width: 177px;
+  }
+}
