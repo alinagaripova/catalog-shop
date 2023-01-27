@@ -16,10 +16,14 @@ export default function Header(){
   const userData = useSelector(state => state.userReducer.userData)
   const isLoading = useSelector(state => state.userReducer.isLoading)
 
+  window.ethereum.on('accountsChanged', (e) => {
+    dispasth(addData(e[0]))
+  });
+
   function connectWallet(){
     if (userData) return;
-
     dispasth(toogleLoading(true));
+
     setTimeout(()=>{ // timeOut для наглядности лоадера
       getAccount()
       .then((data)=> {
@@ -28,6 +32,7 @@ export default function Header(){
       })
     }, 2000)
   }
+
 
   return (
     <header className='header'>
